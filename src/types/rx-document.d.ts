@@ -59,7 +59,7 @@ export declare interface RxDocumentBase<RxDocumentType, OrmMethods = {}> {
     save(): Promise<boolean>;
 
     // attachments
-    putAttachment(creator: RxAttachmentCreator): Promise<RxAttachment<RxDocumentType, OrmMethods>>;
+    putAttachment(creator: RxAttachmentCreator): Promise<RxAttachment<RxDocumentType, OrmMethods> & OrmMethods>;
     getAttachment(id: string): RxAttachment<RxDocumentType, OrmMethods> | null;
     allAttachments(): RxAttachment<RxDocumentType, OrmMethods>[];
 
